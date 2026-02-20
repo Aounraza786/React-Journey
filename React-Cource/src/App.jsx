@@ -1,5 +1,9 @@
-import ProfileCard from "./Components/ProfileCard";
 import "./App.css";
+import Navbar from "./Components/NAvbar";
+import ProfileCard from "./Components/ProfileCard";
+import HeroSection from "./Components/HeroSection";
+import ServiceSection from "./Components/ServiceSection";
+import Footer from "./Components/Footer";
 
 function App() {
   const users = [
@@ -31,6 +35,11 @@ function App() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaGDqrxCzebkRb9OLpx-76MP1O5ANbS4y-jIFbCPoaqO0vUr4dbsa7MSo&s",
     },
   ];
+  const services = [
+    { id: 1, title: "Web Development", info: "We build Websites" },
+    { id: 2, title: "App Development", info: "We build Mobile Apps" },
+    { id: 3, title: "UX/UI Designing", info: "We designed Interface" },
+  ];
   return (
     <>
       <div style={{ border: "2px solid", padding: "20px" }}>
@@ -47,6 +56,16 @@ function App() {
             />
           ))}
         </div>
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h1>Day 2</h1>
+        <Navbar title="My Company" />
+        <HeroSection
+          heading="Malik Aoun Raza"
+          description="I am a Software Engineer graduated from Air University Islamanbad. Currently I am Working in Systems Limited."
+        />
+        <ServiceSection services={services} />
+        <Footer text="I am a footer" />
       </div>
     </>
   );
