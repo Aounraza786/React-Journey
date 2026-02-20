@@ -4,8 +4,14 @@ import ProfileCard from "./Components/ProfileCard";
 import HeroSection from "./Components/HeroSection";
 import ServiceSection from "./Components/ServiceSection";
 import Footer from "./Components/Footer";
+import { useState } from "react";
+import CounterDashboard from "./Components/CounterDashboard";
+import DarkAndLightTheme from "./Components/DarkAndLightTheme";
+import ShowHidePassword from "./Components/ShowHidePassword";
+import LikeButton from "./Components/LikeButton";
 
 function App() {
+  /*   Day 01   */
   const users = [
     {
       id: 1,
@@ -35,13 +41,30 @@ function App() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaGDqrxCzebkRb9OLpx-76MP1O5ANbS4y-jIFbCPoaqO0vUr4dbsa7MSo&s",
     },
   ];
+
+  /* Day 02 */
   const services = [
     { id: 1, title: "Web Development", info: "We build Websites" },
     { id: 2, title: "App Development", info: "We build Mobile Apps" },
     { id: 3, title: "UX/UI Designing", info: "We designed Interface" },
   ];
+  /*  Day 03 */
+
+  /* State Concept */
+  const [count, setcount] = useState(0);
+  /* Re-rendering Concept */
+  console.log("Rendered");
+  const [x, setx] = useState(0);
+
+  /* State + Event Concept */
+  const [isOn, setisOn] = useState(true);
+
+  /* Handling Input Fields */
+  const [name, setname] = useState("");
+
   return (
     <>
+      {/* Day 01 */}
       <div style={{ border: "2px solid", padding: "20px" }}>
         <h1>Day 1</h1>
         <div style={{ display: "flex", gap: "20px" }}>
@@ -57,6 +80,7 @@ function App() {
           ))}
         </div>
       </div>
+      {/* Day 02 */}
       <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
         <h1>Day 2</h1>
         <Navbar title="My Company" />
@@ -66,6 +90,52 @@ function App() {
         />
         <ServiceSection services={services} />
         <Footer text="I am a footer" />
+      </div>
+      {/* Day 03 */}
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h1>Day 03</h1>
+        {/* State Concept */}
+        <h2>Count: {count}</h2>
+        <button
+          style={{ border: "2px solid" }}
+          onClick={() => setcount((prev) => prev + 1)}
+        >
+          Increase
+        </button>
+        {/* Re-rendering Concept */}
+        <button
+          style={{ marginLeft: "5px", border: "2px solid" }}
+          onClick={() => setx(x + 1)}
+        >
+          Click
+        </button>
+        {/* State + Event Concept */}
+        <button
+          style={{ marginLeft: "5px", border: "2px solid" }}
+          onClick={() => {
+            console.log("Old State:", isOn); // How to toggle state
+            setisOn(!isOn);
+          }}
+        >
+          {isOn ? "ON" : "OFF"}
+        </button>
+        {/* Handling Input Fields */}
+        <div>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setname(e.target.value)}
+          />
+          <p>Name is {name}</p>
+        </div>
+        <h1>Task 01: Counter App</h1>
+        <CounterDashboard />
+        <h1>Task 02: Dark/Light Theme Toggle</h1>
+        <DarkAndLightTheme />
+        <h1>Task 03: Show/Hide Password</h1>
+        <ShowHidePassword />
+        <h1>Task 04: Like Button</h1>
+        <LikeButton />
       </div>
     </>
   );
