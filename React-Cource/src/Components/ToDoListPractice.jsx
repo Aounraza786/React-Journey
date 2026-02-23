@@ -14,7 +14,7 @@ function ToDoLists() {
       {todos.map((todo) => (
         <li key={todo.id} style={{ background: "Blue", color: "white" }}>
           {todo.text}
-          {" - "} {todo.completed ? "✅ Completed" : "⏳ Pending"}
+          {" - "} {todo.completed ? "Completed" : "Pending"}
         </li>
       ))}
     </>
