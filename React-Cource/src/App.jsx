@@ -9,6 +9,8 @@ import CounterDashboard from "./Components/CounterDashboard";
 import DarkAndLightTheme from "./Components/DarkAndLightTheme";
 import ShowHidePassword from "./Components/ShowHidePassword";
 import LikeButton from "./Components/LikeButton";
+import ToDoListPractice from "./Components/ToDoListPractice";
+import TodoApp from "./Components/ToDOApp";
 
 function App() {
   /*   Day 01   */
@@ -61,6 +63,45 @@ function App() {
 
   /* Handling Input Fields */
   const [name, setname] = useState("");
+
+  /* Day 04 (using If else Condition*/
+  let template = "";
+  const [pshow, setPshow] = useState(false);
+
+  if (pshow) {
+    template = (
+      <>
+        <p>
+          Welcome to If else Condition concept in react. In App.jsx retrun we
+          can use only ternary operator not if else. if we want to use if else
+          condition the use it above return as we uaes.
+        </p>
+        <button
+          style={{ border: "2px solid" }}
+          onClick={() => setPshow(!pshow)}
+        >
+          Hide
+        </button>
+      </>
+    );
+  } else {
+    template = (
+      <>
+        <button
+          style={{ border: "2px solid" }}
+          onClick={() => setPshow(!pshow)}
+        >
+          Show
+        </button>
+      </>
+    );
+  }
+
+  /* using Ternary Operators */
+  const [status, setstatus] = useState(false);
+
+  /* Rendering Lists */
+  const fruits = ["Apple", "Banana", "Mango", "Strawberry"];
 
   return (
     <>
@@ -136,6 +177,40 @@ function App() {
         <ShowHidePassword />
         <h1>Task 04: Like Button</h1>
         <LikeButton />
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        {/* Day 04 */}
+        <h1>Day 04</h1>
+        {template}
+        {/* using Ternary Operators */}
+        <div>
+          {status ? (
+            <div
+              style={{ background: "red", coloe: "white", marginTop: "10px" }}
+            >
+              Welcomt to condition rendering using Ternary operators
+            </div>
+          ) : (
+            ""
+          )}
+          <button
+            style={{ border: "2px solid", marginTop: "10px" }}
+            onClick={() => setstatus(!status)}
+          >
+            {status ? "Hide" : "Show"}
+          </button>
+        </div>
+        {/* Rendering Lists */}
+        <div>
+          <ul>
+            {fruits.map((fruit) => {
+              <li>{fruit}</li>;
+              console.log(fruit);
+            })}
+          </ul>
+        </div>
+        <ToDoListPractice />
+        <TodoApp />
       </div>
     </>
   );
