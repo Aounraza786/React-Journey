@@ -21,7 +21,7 @@ function Signup() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>SignUp (Handling Multiple Inputs) </h3>
+      <h3>SignUp (Handling Multiple Inputs without Validation) </h3>
       <input
         name="name"
         type="text"
