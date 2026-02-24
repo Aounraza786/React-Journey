@@ -1,7 +1,7 @@
 function Navbar({ title }) {
   return (
     <nav style={{ backgroun: "white", color: "black", padding: "15px" }}>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
     </nav>
   );
 }

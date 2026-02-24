@@ -5,7 +5,7 @@ function CounterDashboard() {
   const [counter, setcounter] = useState(0);
   return (
     <>
-      <h1>Counter: {counter}</h1>
+      <h4>Counter: {counter}</h4>
       <button
         style={{ border: "2px solid" }}
         onClick={() => setcounter((prev) => prev + 1)}

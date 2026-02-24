@@ -10,7 +10,7 @@ function ToDoLists() {
 
   return (
     <>
-      <h1>Todo List Practice</h1>
+      <h3>Todo List Practice</h3>
       {todos.map((todo) => (
         <li key={todo.id} style={{ background: "Blue", color: "white" }}>
           {todo.text}

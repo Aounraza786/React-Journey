@@ -11,6 +11,10 @@ import ShowHidePassword from "./Components/ShowHidePassword";
 import LikeButton from "./Components/LikeButton";
 import ToDoListPractice from "./Components/ToDoListPractice";
 import TodoApp from "./Components/ToDOApp";
+import ControlledComponents from "./Components/Day 05/Controlled-Components";
+import FormVlidation from "./Components/Day 05/Form-Validation";
+import Signup from "./Components/Day 05/Handling-Multiple-inputs";
+import Signup01 from "./Components/Day 05/Handling-multiple-validation-part2";
 
 function App() {
   /*   Day 01   */
@@ -107,7 +111,10 @@ function App() {
     <>
       {/* Day 01 */}
       <div style={{ border: "2px solid", padding: "20px" }}>
-        <h1>Day 1</h1>
+        <h2>
+          Day 1 What is React?, SPA vs MPA, Virtual DOM, Folder structure, JSX
+          basics
+        </h2>
         <div style={{ display: "flex", gap: "20px" }}>
           {users.map((user) => (
             <ProfileCard
@@ -123,7 +130,10 @@ function App() {
       </div>
       {/* Day 02 */}
       <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
-        <h1>Day 2</h1>
+        <h2>
+          Day 2 Functional components, props, reuseability, component
+          composition
+        </h2>
         <Navbar title="My Company" />
         <HeroSection
           heading="Malik Aoun Raza"
@@ -134,9 +144,9 @@ function App() {
       </div>
       {/* Day 03 */}
       <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
-        <h1>Day 03</h1>
+        <h2>Day 03 State, useState, Re-rendering, Event Handling</h2>
         {/* State Concept */}
-        <h2>Count: {count}</h2>
+        <h3>Count: {count}</h3>
         <button
           style={{ border: "2px solid" }}
           onClick={() => setcount((prev) => prev + 1)}
@@ -169,18 +179,18 @@ function App() {
           />
           <p>Name is {name}</p>
         </div>
-        <h1>Task 01: Counter App</h1>
+        <h3>Task 01: Counter App</h3>
         <CounterDashboard />
-        <h1>Task 02: Dark/Light Theme Toggle</h1>
+        <h3>Task 02: Dark/Light Theme Toggle</h3>
         <DarkAndLightTheme />
-        <h1>Task 03: Show/Hide Password</h1>
+        <h3>Task 03: Show/Hide Password</h3>
         <ShowHidePassword />
-        <h1>Task 04: Like Button</h1>
+        <h3>Task 04: Like Button</h3>
         <LikeButton />
       </div>
       <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
         {/* Day 04 */}
-        <h1>Day 04</h1>
+        <h2>Day 04 Rendering lists, map(), Keys, Conditional rendering</h2>
         {template}
         {/* using Ternary Operators */}
         <div>
@@ -209,8 +219,20 @@ function App() {
             })}
           </ul>
         </div>
+        {/* Day 04 */}
         <ToDoListPractice />
         <TodoApp />
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>
+          Day 05 - Controlled Components, Form Validation, Handling Multiple
+          inputs and Validation
+        </h2>
+        {/* Day 05*/}
+        <ControlledComponents />
+        <FormVlidation />
+        <Signup />
+        <Signup01 />
       </div>
     </>
   );

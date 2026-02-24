@@ -28,7 +28,7 @@ function TodoApp() {
 
   return (
     <>
-      <h1>TODo App </h1>
+      <h3>TODo App </h3>
       <input
         type="text"
         value={input}
