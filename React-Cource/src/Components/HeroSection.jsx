@@ -1,7 +1,7 @@
 function HeroSection({ heading, description }) {
   return (
     <section style={{ padding: "15px", textAlign: "center" }}>
-      <h1>{heading}</h1>
+      <h3>{heading}</h3>
       <p>{description}</p>
     </section>
   );
