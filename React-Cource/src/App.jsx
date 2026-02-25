@@ -15,7 +15,13 @@ import ControlledComponents from "./Components/Day 05/Controlled-Components";
 import FormVlidation from "./Components/Day 05/Form-Validation";
 import Signup from "./Components/Day 05/Handling-Multiple-inputs";
 import Signup01 from "./Components/Day 05/Handling-multiple-validation-part2";
-
+import Counter from "./Components/Day 06/UseEffectBasics";
+import ReactUseEffect from "./Components/Day 06/Timer";
+import Challenge from "./Components/Day 06/UseEffectChallenge";
+import CleanUp from "./Components/Day 06/CleanUpFunction";
+import Task from "./Components/Day 06/AnotherChallenge";
+import AutoCounter from "./Components/Day 06/Task";
+import AssessmentTask from "./Components/Day 06/AssessmentTask";
 function App() {
   /*   Day 01   */
   const users = [
@@ -234,6 +240,19 @@ function App() {
         <Signup />
         <Signup01 />
       </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>
+          Day 06 - useEffect Hook: Side effects, useEffect lifecycle ,Dependency
+          array
+        </h2>
+        <Counter />
+        <ReactUseEffect />
+        <Challenge />
+        <CleanUp />
+        <Task />
+        <AutoCounter />
+      </div>
+      <AssessmentTask />
     </>
   );
 }
