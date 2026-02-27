@@ -22,6 +22,10 @@ import CleanUp from "./Components/Day 06/CleanUpFunction";
 import Task from "./Components/Day 06/AnotherChallenge";
 import AutoCounter from "./Components/Day 06/Task";
 import AssessmentTask from "./Components/Day 06/AssessmentTask";
+import HowToNotFetchDataInReact from "./Components/Day 07/Day07-Part01";
+import HowToFetchDataInReact from "./Components/Day 07/Day07-Part02";
+import GetDataFromAnotherApi from "./Components/Day 07/Day07-Part03";
+import LoadingAndErrorState from "./Components/Day 07/Day07-Part04";
 function App() {
   /*   Day 01   */
   const users = [
@@ -251,8 +255,35 @@ function App() {
         <CleanUp />
         <Task />
         <AutoCounter />
+        <AssessmentTask />
       </div>
-      <AssessmentTask />
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>Day 07</h2>
+        <h3>
+          Wrong Way to Fetch Data:{" "}
+          <p>
+            From this way we can fetch data but there is a problem that is state
+            update and component rendered continously. There is no end to not
+            render function. you can check it through Network tab through
+            inspect thats why this is wrong way to fetch data from an api.
+          </p>
+        </h3>
+        <HowToNotFetchDataInReact />
+        <h3>
+          Right way to fetch Data:{" "}
+          <p>
+            From this way we can fetch data. Useeffect run only once because we
+            used empty depency array. that why only one time state change and
+            component re-render. You can check request in network tab through
+            inspect.
+          </p>
+        </h3>
+        <HowToFetchDataInReact />
+        <h3>Data Fetch Fronm Another Api</h3>
+        <GetDataFromAnotherApi />
+        <h3>Loading And Error States</h3>
+        <LoadingAndErrorState />
+      </div>
     </>
   );
 }
