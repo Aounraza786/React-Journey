@@ -26,6 +26,13 @@ import HowToNotFetchDataInReact from "./Components/Day 07/Day07-Part01";
 import HowToFetchDataInReact from "./Components/Day 07/Day07-Part02";
 import GetDataFromAnotherApi from "./Components/Day 07/Day07-Part03";
 import LoadingAndErrorState from "./Components/Day 07/Day07-Part04";
+import Project02 from "./Components/Day-8-project-02/Project02";
+import UseRef from "./Components/Day-09/UseRef-Hook/UseRef";
+import Example2 from "./Components/Day-09/UseRef-Hook/UseRefWithExapmle2";
+import AdvanceExample from "./Components/Day-09/UseRef-Hook/UseRefwithAdvanceExample";
+import RealWorldExample from "./Components/Day-09/UseRef-Hook/UseRefRealWorldExample";
+import FocusCounter from "./Components/Day-09/UseRef-Hook/PracticeTask";
+import ForwardRef from "./Components/Day-09/forwardRef-Hook/forwardRef";
 function App() {
   /*   Day 01   */
   const users = [
@@ -283,6 +290,34 @@ function App() {
         <GetDataFromAnotherApi />
         <h3>Loading And Error States</h3>
         <LoadingAndErrorState />
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>Day 08 - Project 02</h2>
+        <Project02 />
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>Day 09 - UseRef Hook</h2>
+        <div>
+          <p>Example 1 – Accessing DOM Element (Most Common Use)</p>
+          <UseRef />
+        </div>
+        <div>
+          <p>
+            Example 2 – Storing Value Without Re-render
+            <br />
+            This is where beginners get confused.
+            <br />
+            <strong>Problem: </strong>Count how many times button clicked BUT do
+            NOT re-render.
+          </p>
+          <Example2 />
+        </div>
+        <AdvanceExample />
+        <RealWorldExample />
+        <FocusCounter />
+
+        <h2>Day 09 - forwardRef</h2>
+        <ForwardRef />
       </div>
     </>
   );
