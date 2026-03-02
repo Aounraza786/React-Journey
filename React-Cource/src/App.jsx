@@ -30,6 +30,15 @@ function App() {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaGDqrxCzebkRb9OLpx-76MP1O5ANbS4y-jIFbCPoaqO0vUr4dbsa7MSo&s",
     },
+    {
+      id: 4,
+      name: "Kashif Mehmood",
+      age: 21,
+      profession: "MERN Stack Developer",
+      isOnline: true,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaGDqrxCzebkRb9OLpx-76MP1O5ANbS4y-jIFbCPoaqO0vUr4dbsa7MSo&s",
+    },
   ];
   return (
     <>
