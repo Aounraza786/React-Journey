@@ -26,7 +26,7 @@ import HowToNotFetchDataInReact from "./Components/Day 07/Day07-Part01";
 import HowToFetchDataInReact from "./Components/Day 07/Day07-Part02";
 import GetDataFromAnotherApi from "./Components/Day 07/Day07-Part03";
 import LoadingAndErrorState from "./Components/Day 07/Day07-Part04";
-import Project02 from "./Components/Day-8-project-02/Project02";
+import Project02 from "./Components/Day-8/Project02";
 import UseRef from "./Components/Day-09/UseRef-Hook/UseRef";
 import Example2 from "./Components/Day-09/UseRef-Hook/UseRefWithExapmle2";
 import AdvanceExample from "./Components/Day-09/UseRef-Hook/UseRefwithAdvanceExample";
