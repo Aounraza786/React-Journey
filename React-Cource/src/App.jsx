@@ -33,6 +33,13 @@ import AdvanceExample from "./Components/Day-09/UseRef-Hook/UseRefwithAdvanceExa
 import RealWorldExample from "./Components/Day-09/UseRef-Hook/UseRefRealWorldExample";
 import FocusCounter from "./Components/Day-09/UseRef-Hook/PracticeTask";
 import ForwardRef from "./Components/Day-09/forwardRef-Hook/forwardRef";
+import UseID from "./Components/Day-10/UseID-Hook/Basics";
+import SingleuseIdForMultipleInputs from "./Components/Day-10/UseID-Hook/single_useId_for_multipleinputs";
+import ParentComponent from "./Components/Day-10/Props_Drilling/propsdrilling";
+import { BioProvider } from "./Components/Day-10/ContextApi";
+import Home from "./Components/Day-10/ContextApi/Home";
+import About from "./Components/Day-10/ContextApi/About";
+import CustomInput from "./Components/Day-10/UseID-Hook/problem";
 function App() {
   /*   Day 01   */
   const users = [
@@ -327,6 +334,27 @@ function App() {
 
         <h2>Day 09 - forwardRef</h2>
         <ForwardRef />
+      </div>
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <div>
+          <h2>Day 10 - useID Hook</h2>
+          <UseID />
+          <h3>Single useID Hook For MUltiple Inputs</h3>
+          <SingleuseIdForMultipleInputs />
+          <h3>Problem 01 - useId</h3>
+          <CustomInput
+            label="Username"
+            error="Required field"
+            name="UserName"
+          />
+        </div>
+        <h3>Props Drilling</h3>
+        <ParentComponent />
+        <h3>Context API</h3>
+        <BioProvider>
+          <Home />
+          <About />
+        </BioProvider>
       </div>
     </>
   );
