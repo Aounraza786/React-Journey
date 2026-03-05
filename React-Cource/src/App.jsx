@@ -40,6 +40,12 @@ import { BioProvider } from "./Components/Day-10/ContextApi";
 import Home from "./Components/Day-10/ContextApi/Home";
 import About from "./Components/Day-10/ContextApi/About";
 import CustomInput from "./Components/Day-10/UseID-Hook/problem";
+import { BioProvider01 } from "./Components/Day-11/CustomHook/CustomHook";
+import CustomHookAbout from "./Components/Day-11/CustomHook/CustomHookAbout";
+import CustomHookHome from "./Components/Day-11/CustomHook/CustomHookHome";
+import CustomHookServices from "./Components/Day-11/CustomHook/CustomHookServices";
+import Project03 from "./Components/Day-11/Project 03/project03";
+import UseReducerComp from "./Components/Day-11/useReducer Hook/useReducerHook";
 function App() {
   /*   Day 01   */
   const users = [
@@ -355,6 +361,21 @@ function App() {
           <Home />
           <About />
         </BioProvider>
+      </div>
+
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>Day 11 - Custom Hooks</h2>
+        <BioProvider01>
+          <CustomHookHome />
+          <CustomHookAbout />
+          <CustomHookServices />{" "}
+          {/*If I move this component outside of the
+          provider then I acn't take provider props. */}
+        </BioProvider01>
+        <h2>Project 03 - Theme Toggle App</h2>
+        <Project03 />
+        <h2>useReducer Hook</h2>
+        <UseReducerComp />
       </div>
     </>
   );
