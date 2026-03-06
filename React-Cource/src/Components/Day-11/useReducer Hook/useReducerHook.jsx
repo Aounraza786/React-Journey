@@ -1,31 +1,31 @@
 import { useReducer } from "react";
 function UseReducerComp() {
-  const initialState = { count: 0, inc: 2, dec: 2 };
-  const reducer = (state, action) => {
-    console.log(action, state);
+  const initialnumber = { count: 0, inc: 2, dec: 2 };
+  const reducer = (number, action) => {
+    console.log(action, number);
     switch (action.type) {
       case "INCREMENT":
-        //return { count: state.count + 1 };
-        return { ...state, count: state.count + 2 }; // ...state means keep the other states rather except count
+        //return { count: number.count + 1 };
+        return { ...number, count: number.count + 2 }; // ...number means keep the other numbers rather except count
 
       case "DECREMENT":
-        //return { count: state.count + 1 };
-        return { ...state, count: state.count - 2 };
+        //return { count: number.count + 1 };
+        return { ...number, count: number.count - 2 };
 
       case "RESET":
         //return { count:0 };
-        return { ...state, count: 0 };
+        return { ...number, count: 0 };
 
       default:
-        return state;
+        return number;
     }
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [number, dispatch] = useReducer(reducer, initialnumber);
 
   return (
     <div className="p-4 flex flex-co justufy-center items center">
-      <p>{state.count}</p>
+      <p>{number.count}</p>
       <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
       <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
       <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
