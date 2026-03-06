@@ -46,6 +46,8 @@ import CustomHookHome from "./Components/Day-11/CustomHook/CustomHookHome";
 import CustomHookServices from "./Components/Day-11/CustomHook/CustomHookServices";
 import Project03 from "./Components/Day-11/Project 03/project03";
 import UseReducerComp from "./Components/Day-11/useReducer Hook/useReducerHook";
+import ReactMemo from "./Components/Day-12/React-Memo/ReactMemo";
+import UncontrolledForm from "./Components/Day-09/UseRef-Hook/ontrolled-component";
 function App() {
   /*   Day 01   */
   const users = [
@@ -376,6 +378,15 @@ function App() {
         <Project03 />
         <h2>useReducer Hook</h2>
         <UseReducerComp />
+      </div>
+
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <h2>Day 12 - React.memo()</h2>
+        <ReactMemo />
+      </div>
+
+      <div style={{ border: "2px solid", padding: "20px", marginTop: "10px" }}>
+        <UncontrolledForm />
       </div>
     </>
   );
